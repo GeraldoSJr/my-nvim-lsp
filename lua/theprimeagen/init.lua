@@ -66,3 +66,19 @@ autocmd('LspAttach', {
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+-- Map Ctrl+S to :wa in normal mode
+vim.api.nvim_set_keymap('n', '<C-s>', ':wa<CR>', { noremap = true, silent = true })
+
+-- Map Ctrl+S to :wa in insert mode
+vim.api.nvim_set_keymap('i', '<C-s>', '<Esc>:wa<CR>', { noremap = true, silent = true })
+
+-- Map Ctrl+S to :wa in visual mode
+vim.api.nvim_set_keymap('v', '<C-s>', '<Esc>:wa<CR>', { noremap = true, silent = true })
+
+-- Map Ctrl+Q to Esc in insert mode
+vim.api.nvim_set_keymap('i', '<C-q>', '<Esc>', { noremap = true, silent = true })
+
+-- Optionally map Ctrl+Q to Esc in normal mode, just in case you need it
+vim.api.nvim_set_keymap('n', '<C-q>', '<Esc>', { noremap = true, silent = true })
+
